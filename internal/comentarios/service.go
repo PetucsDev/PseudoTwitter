@@ -42,7 +42,7 @@ func (s *service) GetAllByUsers(ctx context.Context, id int) ([]domain.Comments,
 }
 
 func (s *service) GetAllByPublications(ctx context.Context, id int) ([]domain.Comments, error) {
-	ps, err := s.repo.GetAllByUsers(ctx, id)
+	ps, err := s.repo.GetAllByPublications(ctx, id)
 	if err != nil {
 		return nil, err
 	}
